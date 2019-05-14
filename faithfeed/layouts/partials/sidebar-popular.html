@@ -1,0 +1,6 @@
+<div>
+    <div class="card-header"><span>Popular</span></div>
+    <div class="card-body" id="popularMedia">
+        <mediaContent v-for="media in allMedia" v-bind:media="media" v-bind:key="media.id"></mediaContent>
+    </div>
+</div>

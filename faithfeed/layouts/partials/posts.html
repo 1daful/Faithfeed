@@ -1,0 +1,35 @@
+<section class="post">
+    <div>
+        <span class="headline text-center">Recent Articles</span>
+    </div>
+        {{range .Data.Pages.ByLastmod}}
+                <div class="card">
+                        <h5 class="card-title">
+                        {{.Title}}
+                        </h5>
+                        <span>{{.Date.Format "Mon, Jan 2, 2006"}}</span>
+                    <div class="card-body">
+                        <div class="card-img">
+                            {{$image_alt := .Title}}
+                            {{with .Params.image}}      
+                            <img alt={{$image_alt}} src={{.}} class="img-fluid">
+                            {{end}}
+                        </div>
+                        <p class="card-text">
+                            {{with .Description}}
+                            {{.}}
+                            {{else}}
+                            {{.Summary}}
+                            {{end}}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href={{.Permalink}} class="card-link">
+                            Read more
+                        </a>
+            </div>
+                </div>
+    {{end}}
+        </div>
+    </div>
+</section>

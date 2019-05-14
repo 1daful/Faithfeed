@@ -1,0 +1,33 @@
+	<header class="mast" id="page-header">
+		<div class="overlay">
+			<div class="navbar navbar-expand-lg" id="header-nav">
+				<ul class="navbar-nav navbar-right ml-auto header-nav">
+					<li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Sign In</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Library</a></li>
+				</ul>
+			</div>
+			<a href="{{ "" | relLangURL }}" class="navbar-brand logo-icon" title="{{ .Site.Title }}">Edifeeds</a>
+		</div>
+	</header>
+	<nav id="primary-navbar" class="navbar navbar-light navbar-expand-lg">
+			<div id="navbarSupportedContent">
+					<ul class="navbar-nav navbar-left mr-auto">
+							{{$currentPage := .}}
+							{{range .Site.Menus.main}}
+
+								<li class="nav-item">
+									<a href = "#" class="nav-link">
+										{{.Pre}}
+										<span>
+											{{.Name}}
+										</span>
+									</a>
+								</li>
+								
+								{{end}}
+						</ul>
+			</div>
+	</nav>
+	

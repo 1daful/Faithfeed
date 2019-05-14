@@ -1,0 +1,20 @@
+{{define "main"}}
+    <div class="container-fluid" id="frontpage">
+        <div class="row">
+        <!--main section-->
+            <div class="main-section col-lg-9">
+                <!--bible moments and quotes-->
+                {{- partial "bible_moments.html" . -}}
+                
+                <!--post section-->
+                {{- partial "posts.html" . -}}
+            </div>
+            <!--collections-->
+            <div class="col-lg-3">
+                {{- partial "sidebar-library.html" . -}}
+                {{- partial "site-scripts.html"}}
+            </div>
+        </div>
+    </div>
+    
+    {{end}}

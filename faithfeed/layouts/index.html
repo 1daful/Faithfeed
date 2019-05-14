@@ -1,0 +1,19 @@
+{{define "main"}}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                {{ partial "bible_moments.html" . }}
+                
+                {{ partial "posts.html" . }}
+
+                {{ partial "recent-media.html" .}}
+            </div>
+            
+            <div class="col-lg-3">
+                {{ partial "sidebar-library.html" . }}
+                {{ partial "sidebar-popular.html" .}}
+                {{ partial "sidebar-series".html .}}
+            </div>
+        </div>
+    </div>
+    {{end}}

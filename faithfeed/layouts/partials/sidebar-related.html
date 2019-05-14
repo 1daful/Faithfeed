@@ -1,0 +1,6 @@
+<div>
+    <div class="card-header"><span>Related to this topic</span></div>
+    <div class="card-body" id="relatedMedia">
+        <mediaContent v-for="media in allMedia" v-bind:media="media" v-bind:key="media.id"></mediaContent>
+    </div>
+</div>

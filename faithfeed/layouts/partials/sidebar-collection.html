@@ -1,0 +1,7 @@
+<div class="card">
+    <div class="card-header"><span>Your Collection</span></div>
+    <div class="card-body" id="mediaCollection">
+        <mediaContent v-for="media in mediaContent" v-bind:media="media" v-bind:key="media.id">
+        </mediaContent>
+    </div>
+</div>

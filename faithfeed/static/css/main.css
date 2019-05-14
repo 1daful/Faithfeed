@@ -1,0 +1,63 @@
+﻿body{
+    background-color:#f7f7f7;
+}
+
+.post{
+	margin:4em 0;
+	position:relative;
+}
+
+.post h1{
+	margin: 2em;
+	background-color: dodgerblue;
+}
+
+.post img{
+	padding:1em;
+}
+
+.post .card{
+	box-shadow: 0 0 20px #ccc;
+	margin-top: 15px;
+	padding: 1em;
+}
+
+.post .card-img{
+	width: 100%;
+}
+
+.post .card-title{
+	color: #f97300;
+}
+
+.post div{
+	padding: 0px;
+}
+.line{
+	color:aqua;
+	background-color:#f7f7f7;
+	display:table;
+	border-top:medium cornflowerblue solid;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
+
+}
+
+.headline{
+	background-color:aqua;
+	display:inline-block;
+	margin:auto;
+	padding-right:3px;
+	padding-left:3px;
+	font-size: 20pt;
+}
+
+.section-header{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*.layer{
+	margin-top: 2px;
+}*/

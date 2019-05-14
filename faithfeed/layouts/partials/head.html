@@ -1,0 +1,39 @@
+
+<head>
+    <meta content="text/html charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow" />
+
+    {{ if .Site.Params.opengraph }}{{ template "_internal/opengraph.html" . }}{{ end }}
+    {{ if .Site.Params.twitter_cards }}{{ template "_internal/twitter_cards.html" . }}{{ end }}
+    
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    {{ with .OutputFormats.Get "rss" -}}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" />
+	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css" />
+
+    <title>
+        {{ if eq .Kind "home" }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ if .Params.heading }} {{ .Params.heading }} | {{ .Site.Title }} {{ else }} {{ .Title }} | {{ .Site.Title }} {{ end }}
+        {{ end }}
+    </title>
+
+    <!-- Icon -->
+    {{ with .Site.Params.faviconfile }}
+    <link rel="shortcut icon" href="{{ . | absURL }}"/>
+    {{end}}
+
+    {{ partial "site-scripts.html"}}
+</head>

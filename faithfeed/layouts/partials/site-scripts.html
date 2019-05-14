@@ -1,0 +1,32 @@
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script type="text/javascript" src="{{ "js/vue.js" | absURL }}"></script>
+
+<script type="text/javascript" src="{{ "js/main.js" | absURL }}"></script>
+
+
+<!-- Highlight -->
+{{ if .Site.Params.highlightjs }}  
+  <script src="{{ "js/vendors/highlight.pack.js" | absURL }}"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+{{ end }}
+<!-- /.Highlight -->
+
+<!-- KaTeX -->
+{{ if .Site.Params.katex }} 
+  <script src="{{ "js/vendors/katex/katex.min.js" | absURL }}"> </script>
+  <script src="{{ "js/vendors/katex/contrib/auto-render.min.js" | absURL }}"></script>
+
+{{ end }}
+<!-- /.KaTeX -->
+
+
+<!-- Google Analytics -->
+{{ template "_internal/google_analytics_async.html" . }}
+
+
+

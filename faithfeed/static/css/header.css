@@ -1,0 +1,67 @@
+.overlay{
+	position: relative;
+	height: inherit;
+	width:inherit;
+	left: 0;
+	top: 0;
+	background:rgba(0, 0, 0, 0.75);
+}
+
+.mast{
+	height:15em;
+    background-image: url("../images/edifeeds.png");
+    margin-bottom: 30px; 
+}
+
+.logo-icon{
+	font-family:"Matura MT Script Capitals";
+	font-style:oblique;
+	font-size:3em;
+	margin-left: 1em;
+}
+
+.navbar-collapse{
+	justify-content:flex-end;
+}
+
+/* nav menu*/
+.menu__link {
+    display: block;
+    padding: 10px 15px;
+    padding: .625rem .9375rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#primary-navbar{
+	background-color:dodgerblue;
+}
+
+.nav-link:hover{
+	color:crimson;
+}
+
+menu__item, .btn {
+	transition: background-color .25s ease-out;
+}
+
+/*ul menu list (navbar nav)*/
+.js .menu__list--active {
+    visibility: visible;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.js .menu__list {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    visibility: hidden;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}

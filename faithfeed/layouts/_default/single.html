@@ -1,0 +1,24 @@
+{{define "main"}}
+        <!--main section-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <!--bible moments and quotes-->
+            
+                {{ partial "bible_moments.html" . }}
+                {{with Params.image}}
+                    <img alt="post image" src = "{{.}}" />
+                {{ .Content}}
+
+            </div>
+            <!--collections-->
+            <div class="col-lg-3">
+                {{ partial "sidebar-library.html" . }}
+                {{ partial "sidebar-popular.html" . }}
+                {{ partial "sidebar-series.html" . }}
+                {{ partial "sidebar-related.html" . }}
+            </div>
+        </div>
+    </div>
+    
+    {{end}}

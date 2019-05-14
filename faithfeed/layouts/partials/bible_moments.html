@@ -1,0 +1,20 @@
+<div class="section-header">
+    <span><h1>Bible Moments</h1></span>
+    <div class="container">
+        <div class="row">
+            {{range .Site.Taxonomies.categories.bible}}
+            <div class="col-lg-4"> 
+                <a href="index.html" class="cover-img">
+                {{$image_alt := .Title}}
+                {{with .Params.image}}      
+                <img alt={{$image_alt}} src={{.}} class="img-fluid">
+                {{end}}
+                <p>
+                    {{.Content}}
+                </p>
+                </a>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
