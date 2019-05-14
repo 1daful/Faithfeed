@@ -1,0 +1,85 @@
+baseURL                   = "https://edifeeds.com"
+builddrafts                = false
+languageCode               = "zn-Hans"
+canonifyurls               = true
+contentdir                 = "content"
+layoutdir                  = "layouts"
+publishdir                 = "public"
+enableEmoji                = true
+hasCJKLanguage             = true
+summaryLength              = 200
+Paginate                   = 3
+
+theme                      = "Faithfeed"
+title                      = "Edifeeds"
+
+pygmentsuseclasses         = true
+
+
+[permalinks]
+  blog                     = "blog/:year-:month/:slug/"
+
+
+[taxonomies]
+  tag                      = "tags"
+  series                   = "series"
+  category                 = "categories"
+
+
+[menu]
+  [[menu.main]]
+    name                   = "Articles"
+    weight                 = -120
+    identifier             = "articles"
+    url                    = "articles/"  
+
+  [[menu.main]]
+    name                   = "Words On Marble"
+    weight                 = -110
+    identifier             = "words-on-marble"
+    url                    = "words-on-marble/" 
+
+  [[menu.main]]
+    name                   = "Resources"
+    weight                 = -100
+    identifier             = "resources"
+    url                    = "resources/"  
+
+ 
+
+[params]
+  faviconfile              = "img/zheng.png"               # from static/
+  avatar                   = "img/profile.jpg"             # path to image in static dir e.g img/avatar.png 
+  author                   = "Edifeeds"
+
+  latestpostscount         = 5                             # how many posts to display on the home page
+  bloggroupby              = 'month'
+  dateform                 = "Jan 2, 2006"
+  dateformfull             = "2006-01-02  Monday  15:04:05"
+  noshowreadtime           = false                         # if true, don't show "<x> minutes read" in posts
+
+  # slides
+  slidesDirPath            = "themes/AllinOne/static/img/header-slides"    # path to image in local dir (path for hugo)
+  slidesDirPathURL         = "img/header-slides"    # path to image in static dir (for static pages)
+
+  # highlighting 
+  highlightjs              = true
+
+  # latex
+  katex                    = true
+
+  # links
+  email                    = "you@email.com"
+  github                   = "//github.com/you"
+  linkedin                 = "//linkedin.com/in/you"
+  facebook                 = "//facebook.com/you"
+  youtube                  = "//youtube.com/you"
+  twitter                  = "//twitter.com/you" 
+  px500                    = "//px500"
+  instagram                = "//instagram.com/you"
+  include_rss              = true                          # include RSS <link> tag in <head> and show RSS icon
+  
+  # analytics
+  googleAnalytics          = "your-google-analytic-id"
+    
+    
