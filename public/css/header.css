@@ -1,0 +1,65 @@
+.icon{
+    font-size:3em
+}
+.overlay{
+	position: relative;
+	height: inherit;
+	width:inherit;
+	left: 0;
+	top: 0;
+	background:rgba(0, 0, 0, 0.75);
+}
+
+.mast{
+    background-image: url("../images/edifeeds.png");
+}
+
+.navbar-collapse{
+	justify-content:flex-end;
+}
+
+/* nav menu*/
+.navbar a {
+    display: block;
+    padding: .625rem .9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#primary-navbar{
+    background-color:rgb(5, 3, 39);
+}
+#primary-navbar a{
+    color: #fff;
+}
+
+.nav-link:hover{
+    visibility: visible;
+    border: 1px solid rgba(255, 255, 255, .1);
+    background-color: rgba(190, 179, 179, 0.384);
+    transition: background-color .25s ease-out;
+}
+
+.menu__item, .btn {
+	transition: background-color .25s ease-out;
+}
+
+/*ul menu list (navbar nav)*/
+.js .menu__list--active {
+    visibility: visible;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.js .menu__list {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    visibility: hidden;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
